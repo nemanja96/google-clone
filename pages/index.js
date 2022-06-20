@@ -4,6 +4,7 @@ import imageUrl from '../public/avatar.png';
 import {MenuIcon, MicrophoneIcon, SearchIcon} from '@heroicons/react/outline';
 import Image from 'next/image';
 import googleImg from '../public/googleImg.png';
+import Footer from '../components/Footer';
 
 export default function Home() {
   return (
@@ -22,7 +23,7 @@ export default function Home() {
         </div>
       </header>
 
-      <form className="flex flex-col items-center justify-center flex-1">
+      <form className="flex flex-col items-center justify-center flex-1 mt-16">
         <Image
           src={googleImg} width={272} height={92} 
         />
@@ -37,25 +38,7 @@ export default function Home() {
         </div>
       </form>
 
-      <footer className='flex flex-col w-full justify-end bg-gray-100'>
-        <div className='flex space-x-4 flex-end items-center px-8 py-3 border-b border-gray-200'>
-          <p className='text-md link text-gray-500'>Srbija</p>
-        </div>
-        <div className='flex flex-col px-8 py-3 justify-between md:flex-row'>
-          <div className='grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
-            <p className='text-sm link text-gray-500 mr-3 text-base'>Osnovni podaci</p>
-            <p className='text-sm link text-gray-500 mr-3 text-base'>Oglašavanje</p>
-            <p className='text-sm link text-gray-500 mr-3 text-base'>Za posao</p>
-            <p className='text-sm link text-gray-500 mr-3 text-base'>Kako radi</p>
-          </div>
-          <div className='grid grid-cols-2 col-auto md:grid-cols-2 lg:grid-cols-3'>
-            <p className='text-sm link text-gray-500 mr-3 text-base'>Privatnost</p>
-            <p className='text-sm link text-gray-500 mr-3 text-base'>Uslovi</p>
-            <p className='text-sm link text-gray-500 mr-3 text-base'>Podešavanja</p>
-          </div>
-        </div>
-      </footer>
-
+      <Footer />
     </div>
   )
 }
