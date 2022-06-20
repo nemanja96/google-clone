@@ -5,8 +5,25 @@ import {MenuIcon, MicrophoneIcon, SearchIcon} from '@heroicons/react/outline';
 import Image from 'next/image';
 import googleImg from '../public/googleImg.png';
 import Footer from '../components/Footer';
+import { useRef } from 'react';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  
+  const router = useRouter();
+  const searchInputRef = useRef(null);
+
+  const search = e => {
+    e.preventDefault();
+
+    const term = searchInputRef.current.value;
+
+    if(!term) return;
+
+    router.push(`/search?term=${term}`);
+
+  }
+
   return (
     <div className='flex flex-col h-screen'>
       <Head>
@@ -29,11 +46,11 @@ export default function Home() {
         />
         <div className='rounded-full border max-w-xl w-4/5 px-2 py-3 mt-7 flex items-center hover:shadow-md focus-within:shadow-md sm:max-w-xl lg:max-w-2xl'>
           <SearchIcon className="w-5 h-5 mr-3 text-gray-400" />
-          <input className='flex-1 focus:outline-none' />
+          <input ref={searchInputRef} className='flex-1 focus:outline-none' />
           <MicrophoneIcon className="w-5 h-5 ml-3 text-gray-400" />
         </div>
         <div className='flex flex-col mt-7 md:flex-row'>
-          <button className="bg-gray-100 px-4 py-2 text-md text-gray-800 hover:bg-gray-200 md:mr-2">Google pretraga</button>
+          <button className="bg-gray-100 px-4 py-2 text-md text-gray-800 hover:bg-gray-200 md:mr-2" onClick={search}>Google pretraga</button>
           <button className="bg-gray-100 px-4 py-2 mt-2 text-md text-gray-800 hover:bg-gray-200 md:mt-0 md:ml-2">Iz prve ruke</button>
         </div>
       </form>
