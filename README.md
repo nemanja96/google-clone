@@ -6,6 +6,8 @@
 
 <img src="google-clone.png" />
 
+<img src="google-clone-search.png" />
+
 ## Getting Started
 
 First, run the development server:
