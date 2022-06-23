@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderOption from './HeaderOption'
-import { CogIcon, DotsVerticalIcon, LocationMarkerIcon, MenuIcon, MicrophoneIcon, NewspaperIcon, PhotographIcon, SearchIcon, VideoCameraIcon, XIcon } from '@heroicons/react/outline';
+import { DotsVerticalIcon, LocationMarkerIcon, NewspaperIcon, PhotographIcon, SearchIcon, VideoCameraIcon } from '@heroicons/react/outline';
 
 const HeaderOptions = ({styles}) => {
   return (

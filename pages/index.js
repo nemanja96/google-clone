@@ -42,7 +42,7 @@ export default function Home() {
 
       <form className="flex flex-col items-center justify-center flex-1 mt-16">
         <Image
-          src={googleImg} width={272} height={92} 
+          src={googleImg} width={272} height={92} alt="Google Logo"
         />
         <div className='rounded-full border max-w-xl w-4/5 px-2 py-3 mt-7 flex items-center hover:shadow-md focus-within:shadow-md sm:max-w-xl lg:max-w-2xl'>
           <SearchIcon className="w-5 h-5 mr-3 text-gray-400" />

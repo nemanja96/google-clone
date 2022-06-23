@@ -27,11 +27,11 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 bg-white z-10">
-        <div className="flex w-full flex-col justify-end items-center border-b hidden md:flex">
+        <div className="w-full flex-col justify-end items-center border-b hidden md:flex">
             <div className="w-11/12 flex justify-end">
                 <div className="flex items-center py-7 w-full md:w-4/5 ">
-                    <Image src={googleImg} width="93.1" height="31.2" onClick={() => router.push('/')} className="cursor-pointer" />
-                    <form className="px-3 py-3 rounded-full border shadow-md flex w-full items-center ml-2 max-w-screen-sm md:w-full">
+                    <Image src={googleImg} width="93.1" height="31.2" onClick={() => router.push('/')} className="cursor-pointer" alt="Google Logo" />
+                    <form className="px-3 py-3 rounded-full border shadow-md flex w-full items-center ml-7 max-w-screen-sm md:w-full">
                         <input type="text" value={term} onChange={e => setTerm(e.target.value)} ref={searchInputRef} className='w-full focus:outline-none' />
                         <XIcon onClick={() => setTerm('')} className="w-5 h-5 text-gray-500 mx-1 cursor-pointer transition duration-100 transform hover:scale-125" />
                         <MicrophoneIcon className="w-5 h-5 text-gray-500 mx-1 cursor-pointer hidden md:inline" />
@@ -57,7 +57,7 @@ const Header = () => {
             <div className="w-11/12 flex flex-col justify-end">
                 <div className="flex items-center justify-between py-4 w-full">
                     <MenuIcon className="w-6 h-6 text-gray-500 cursor-pointer" />
-                    <Image src={googleImg} width="93.1" height="31.2" onClick={() => router.push('/')} className="cursor-pointer" />
+                    <Image src={googleImg} width="93.1" height="31.2" onClick={() => router.push('/')} className="cursor-pointer" alt="Google Logo" />
                     <Avatar url={avatarImg} />
                 </div>
                 <div className="flex items-center justify-center w-full">
